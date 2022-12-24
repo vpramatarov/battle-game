@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: "3.8"
+services:
+  php:
+    container_name: php-battle-game
+    build: ./docker/php
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./app:/var/www/html
+    working_dir: /var/www/html
